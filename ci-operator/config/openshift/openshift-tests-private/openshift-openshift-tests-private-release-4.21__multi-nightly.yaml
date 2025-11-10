@@ -679,6 +679,9 @@ tests:
       TEST_FILTERS: ~ChkUpgrade&;~DisconnectedOnly&;~NonPreRelease&;~HyperShiftMGMT&;~MicroShiftOnly&;~NonHyperShiftHOST&;~Serial&;~Disruptive&
       TEST_TIMEOUT: "30"
     test:
+    - ref: wait
+      timeout: 6h0m0s
+      best_effort: true
     - chain: openshift-e2e-test-hypershift-qe
     workflow: cucushift-installer-rehearse-aws-ipi-ovn-hypershift-heterogeneous-guest
 - as: aws-ipi-priv-sts-basecap-none-mini-perm-amd-f28-destructive
